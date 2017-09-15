@@ -24,17 +24,21 @@
 .fox__trump {
     position: absolute;
     z-index: 3;
+    top: 30%;
     bottom: 0;
-    left: 40px;
-    right: 40px;
-    width: calc(100% - 80px);
-    margin: auto;
+    left: 0;
+    right: 0;
+    background-image: url('@@assetPath@@/assets/images/trump.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
 
     @include mq(tablet) {
         max-width: 900px;
         left: -35%;
         right: 0;
         margin: auto;
+        background-size: contain;
     }
 }
 
@@ -45,19 +49,21 @@
     left: 30px;
     right: 30px;
     margin: auto;
-    border: 12px solid $c-black;
+    border: 6px solid $c-black;
     display: inline-block;
 
     @include mq(tablet) {
         width: 800px;
         top: 35%;
         left: 50%;
+        border-width: 12px;
         transform: translateX(-50%) translateY(-50%);
     }
 }
 
 .fox-tv__screen {
     width: 100%;
+    display: block;
 }
 
 .fox-tv__graphics {
@@ -111,6 +117,8 @@
     background-color: $c-white;
     line-height: 1.6;
     font-size: 2.6vw;
+    margin: 0;
+    color: $c-black;
 
     @include mq(tablet) {
         font-size: 26px;
@@ -136,6 +144,11 @@
     overflow: hidden;
     padding-left: 100%;
     width: 100%;
+    height: 3.4vw;
+
+    @include mq(tablet) {
+        height: 30px;
+    }
 }
 
 @keyframes marquee {
@@ -165,6 +178,7 @@
     color: $c-white;
     font-size: 2.1vw;
     line-height: 1.3;
+    vertical-align: text-top;
     display: inline-block;
 
     @include mq(tablet) {
